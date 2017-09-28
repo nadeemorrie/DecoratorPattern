@@ -1,7 +1,9 @@
 <?php
 
-class BasicInspection {
-	 public function getCost() {
+class BasicInspection
+{
+	 public function getCost()
+	 {
 	 	return 19;
 	 }
 

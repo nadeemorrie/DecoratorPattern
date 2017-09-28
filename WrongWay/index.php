@@ -6,8 +6,6 @@ require ('BasicInspectionAndOilChangeAndTireRotation.php');
 
 // (new VeggieSub)->make();
 
-var_dump( 
-		(new BasicInspectionAndOilChangeAndTireRotation())->getCost() 
-	);
+var_dump((new BasicInspectionAndOilChangeAndTireRotation())->getCost());
 
 ?>

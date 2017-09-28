@@ -1,6 +1,7 @@
 <?php
 
-abstract class Order {
+abstract class Order
+{
 
 	protected $baseCurrency;
 	protected $exchangeCurrency;
@@ -13,10 +14,11 @@ abstract class Order {
 	/**
      * Set the default purchase currency. default is USD.
      *
-     * @param  base currency code.          
+     * @param  base currency code.
      */
-	protected function setDefaultBaseCurrencyCode($baseCurrency) {
-		$this->baseCurrency = $baseCurrency; 
+	protected function setDefaultBaseCurrencyCode($baseCurrency)
+	{
+		$this->baseCurrency = $baseCurrency;
 	}
 
 	/**
@@ -24,7 +26,8 @@ abstract class Order {
      *
      * @return string $code
      */
-	protected function getExchangeRate() {
+	protected function getExchangeRate()
+	{
 		return $this->exchangeRate;
 	}
 
@@ -33,44 +36,49 @@ abstract class Order {
      *
      * @return string $code
      */
-	protected function setExchangeRate($exchangeRate) {
+	protected function setExchangeRate($exchangeRate)
+	{
 		return $this->exchangeRate = $exchangeRate;
 	}
 
 	/**
-     * Get the buy amount 
-     *     
+     * Get the buy amount
+     *
      * @return decimal
      */
-	protected function getBuyAmount() {
+	protected function getBuyAmount()
+	{
 		return $this->buyAmount;
 	}
 
 	/**
-     * Set the buy amount 
+     * Set the buy amount
      *
      * @param decimal
      */
-	protected function setBuyAmount($amount) {
+	protected function setBuyAmount($amount)
+	{
 		$this->buyAmount = $amount;
 	}
 
 	/**
-     * Calculate the converted amount 
+     * Calculate the converted amount
      *
      * @return decimal
      */
-	protected function getConvertedAmount() {
+	protected function getConvertedAmount()
+	{
 		$this->setConvertedAmount();
 		return $this->convertedAmount;
 	}
 
 	/**
-     * Calculate the converted amount 
+     * Calculate the converted amount
      *
      * @return string
      */
-	protected function setConvertedAmount () {
+	protected function setConvertedAmount ()
+	{
 		$this->convertedAmount = $this->buyAmount * $this->exchangeRate;
 	}
 }
